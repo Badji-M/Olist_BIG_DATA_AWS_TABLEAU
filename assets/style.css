@@ -1,0 +1,29 @@
+/* TITRE PRINCIPAL */
+h1 {
+    color: #2E7D32 !important;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* BOUTONS */
+.stButton>button {
+    background-color: #2E7D32;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+}
+
+/* CARDS */
+.block-container {
+    padding-top: 2rem;
+}
+
+.stTextInput>div>div>input {
+    border-radius: 8px;
+}
+
+.stSelectbox>div>div>select {
+    border-radius: 8px;
+}
