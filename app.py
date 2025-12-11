@@ -41,7 +41,6 @@ def insert_order(conn, customer_id, order_date, items):
             """, (order_id, item["product_id"], item["price"], item["freight_value"], item["seller_id"]))
 
         conn.commit()
-        st.write(f"Order ID généré côté Python : {order_id}")
         return order_id
 
     except Error as e:
@@ -163,7 +162,6 @@ if conn:
         btn_col1, btn_col2 = st.columns([1,1])
         with btn_col1:
             if st.button("Ajouter la commande", key="add_order_button"):
-                st.write("Items à insérer:", items)
                 order_id = insert_order(conn, customer_id, order_date, items)
                 if order_id:
                     st.success("Commande ajoutée avec succès !")
@@ -205,10 +203,11 @@ if conn:
     last_orders = pd.read_sql("""
         SELECT c.customer_unique_id AS client,
                GROUP_CONCAT(p.product_category_name SEPARATOR ', ') AS produits,
+               GROUP_CONCAT(p.product_category_name SEPARATOR ', ') AS produits,
                SUM(oi.price + oi.freight_value) AS total,
                o.order_purchase_timestamp AS date
         FROM olist_orders_dataset o
-        JOIN olist_customers_dataset c ON o.customer_id = c.customer_id
+        JOIN olist_customers_dataset c ON o.customer_id = c.customer_idt c ON o.customer_id = c.customer_id
         JOIN olist_order_items_dataset oi ON oi.order_id = o.order_id
         JOIN olist_products_dataset p ON oi.product_id = p.product_id
         GROUP BY c.customer_unique_id, o.order_purchase_timestamp
