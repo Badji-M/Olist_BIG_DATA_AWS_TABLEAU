@@ -12,7 +12,7 @@ Ce dépôt contient l'application Streamlit permettant d'ajouter des commandes (
 ## Liens
 - Lien vers le dashboard Tableau : <https://public.tableau.com/app/profile/pape.mamadou.badji/viz/Dashboard_AWS_Olist_AS3/VueglobaleURL_DASHBOARD_A_METTRE_ICI>
 - Lien vers la présentation canva : <https://www.canva.com/design/DAG7CcMOwnk/m4EhDpyFmzNFIbKcW-nfBQ/edit?utm_content=DAG7CcMOwnk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton>
-- - Lien vers de l'applition pavec le formulaire d'ajout des commandes : <https://commander-ventes.streamlit.app/>
+- Lien vers de l'applition pavec le formulaire d'ajout des commandes : <https://commander-ventes.streamlit.app/>
 
 ## Contexte et flux global
 1. Téléchargement des fichiers CSV Olist (données e‑commerce Brésil).
